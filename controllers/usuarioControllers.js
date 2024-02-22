@@ -1,4 +1,4 @@
-import Usuario from "../models/usuario";
+import Usuario from "../models/usuario.js";
 
 const formularioLogin = (req, res) => {
   res.render('auth/login', {
@@ -15,8 +15,8 @@ const formularioRegistro = (req, res) => {
 const registrar = async (req, res) => {
   console.log('Registrando.....', req.body);
 
-  // const usuario = await Usuario.create(req.body);
-  // res.json(usuario)
+  const usuario = await Usuario.create(req.body);
+  res.json(usuario)
 }
 
 const formularioOlvidePassword = (req, res) => {

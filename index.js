@@ -4,7 +4,7 @@ import db from './config/db.js'
 const app = express();
 const port = 3000;
 // Habilitar lectura de datos de  formularios
-// app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 
  // Routing
 app.use('/auth', routerUsuario);
